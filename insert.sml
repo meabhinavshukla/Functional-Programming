@@ -2,9 +2,9 @@ Control.Print.printDepth := 10;
 datatype 'a tree = leaf | node of 'a * 'a tree * 'a tree;
 
 fun insert(i, leaf) = node(i, leaf, leaf)
-					| insert(i, node(v, left, right)) = if (i=v) then node(v, left, right)
-														else if (i<v) then node(v, insert(i, left), right)
-														else node(v, left, insert(i, right));
+|   insert(i, node(v, left, right)) = if (i=v) then node(v, left, right)
+				      else if (i<v) then node(v, insert(i, left), right)
+				      else node(v, left, insert(i, right));
 
 fun testcase() =
  let val t1 = node(100,leaf,leaf);

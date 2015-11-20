@@ -18,7 +18,7 @@ fun reduce(f, b, [ ]) = b
 
  
 fun toString(leaf(x)) = x
-|	toString(node(l)) = let fun h(x,y) = toString(x) ^ " " ^ y
+|   toString(node(l)) = let fun h(x,y) = toString(x) ^ " " ^ y
 			    in reduce(h, "", l)
 			    end;
 						
